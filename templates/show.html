@@ -1,0 +1,24 @@
+<html>
+<title>Display</title>
+<body bgcolor="cyan">
+<center>
+<h1> Display Student </h1> <br><br>
+<table border=1>
+    <thead>
+        <tr>
+        <th>Sr NO.</th><th>Name</th><th>Roll</th><th>Per</th>
+        </tr>
+    </thead>
+    <tbody>
+        {%for i in d%}
+            <tr>
+            <td>{{i.id}}</td><td>{{i.name}}</td><td>{{i.roll}}</td><td>{{i.per}}</td>
+            </tr>
+        {%endfor%}
+    </tbody>
+
+</table>
+</center>
+</form>
+</body>
+</html>

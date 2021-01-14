@@ -1,0 +1,47 @@
+address:
+http://127.0.0.1:8000/
+
+create Project
+django-admin startproject [project_name]
+
+run project
+python manage.py runserver
+
+migrations:
+python manage.py makemigrations 
+
+migrating databse:
+python manage.py migrate
+
+
+Mysql Queries:
+
+1)selecting attributes from database
+classname.objects.raw('SELECT attributes FROM table')
+all_entries = Entry.objects.all()
+
+
+2)retriving by parameters:
+lname = 'Doe'
+classname.objects.raw('SELECT * FROM myapp_person WHERE last_name = %s', [lname])
+
+Insert:
+obj= classname(name='Beatles Blog', tagline='All the latest Beatles news.')
+obj.save()
+
+Update:
+    student.objects.filter(id=ids).update(roll=roll,name=name,per=per)
+
+
+Delete:
+student.objects.filter(id=ids).delete()
+
+
+BACKUP
+retrive database on local disk
+mysqldump -u root demodatabase > path
+cd
+mysqldump -u yourusername -h yourusername.mysql.pythonanywhere-services.com --set-gtid-purged=OFF 'yourusername$dbname'  > db-backup.sql
+example:
+cd
+mysqldump -u PICOB -h PICOB.mysql.pythonanywhere-services.com --set-gtid-purged=OFF 'PICOB$demodatabase'  > db-backup.sql

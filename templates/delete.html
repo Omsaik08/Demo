@@ -1,0 +1,15 @@
+<html>
+	<title>
+		Delete
+	</title>
+	<body bgcolor="grey">
+		<center>
+		<h1>Delete records</h1>
+		<form action="" method="POST">
+			{%csrf_token%}
+			Enter id of student:<input type="number" name="id" required><br><br>
+			<input type="submit" name="delete"><br>
+		</form>
+		</center>
+	</body>
+</html>

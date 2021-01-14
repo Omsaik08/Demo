@@ -1,0 +1,18 @@
+<html>
+	<title>
+		Update
+	</title>
+	<body bgcolor="yellow">
+		<center>
+		<h1>Update records</h1>
+		<form action="" method="POST">
+			{%csrf_token%}
+			Enter id of student:<input type="number" name="id" required><br><br>
+			Enter New Name:<input type="text" name="nname"><br><br>
+			Enter New Roll:<input type="number" name="nroll"><br><br>
+			Enter New Percentage:<input type="number" name="nper"><br><br>
+			<input type="submit" name="update"><br>
+		</form>
+		</center>
+	</body>
+</html>

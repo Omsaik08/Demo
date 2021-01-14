@@ -1,0 +1,15 @@
+<html>
+<title>Insert</title>
+<body bgcolor="Green">
+<center>
+<h1> Insert Student </h1> <br><br>
+<form action="" method="POST">
+{% csrf_token %}
+Enter Roll:<input type="number" name="sroll" placeholder="Roll"><br><br>
+Enter Name:<input type="text" name="sname" placeholder="Name"><br><br>
+Enter Percentage:<input type="number" name="sper" placeholder="Percentage"><br><br>
+<input type="submit" name="Insert"><br><br>
+</form>
+</center>
+</body>
+</html>
